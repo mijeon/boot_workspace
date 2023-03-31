@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+	<!-- header_link 올 곳 -->
+	<th:block th:replace="/inc/header_link"/>
+</head>
+<body>
+	<div class="container">
+		<form>
+			<div class="form-group">
+				<input type="text" class="form-control" placeholder="Enter title" name="title">
+			</div>
+			<div class="form-group">
+				<input type="text" class="form-control" placeholder="Enter writer" name="writer">
+			</div>
+			<div class="form-group">
+				<textarea type="password" class="form-control" placeholder="Enter content" name="content"></textarea>
+			</div>
+			<button type="button" class="btn btn-primary">등록</button>
+		</form>
+	
+
+	<!-- footer 들어올 곳 -->
+	<th:block th:replace="/inc/footer"/>
+	<!-- /footer -->
+	</div>
+</body>
+</html>

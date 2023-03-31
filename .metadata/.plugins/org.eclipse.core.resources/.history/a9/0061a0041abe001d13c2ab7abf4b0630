@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+	<!-- header_link 올 곳 -->
+	<th:block th:replace="/inc/header_link"/>
+</head>
+<body>
+	<div class="container">
+		<table class="table table-hover">
+			<thead>
+				<tr>
+					<th>No</th>
+					<th>제목</th>
+					<th>작성자</th>
+					<th>등록일</th>
+					<th>조회수</th>
+				</tr>
+			</thead>
+			<tbody>
+				<!-- th:each="하나의 요소:집합" -->
+				<tr th:each="n:${#numbers.sequence(1, 20)}">  
+	                <td th:text="${n}">No</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	
+	<!-- footer 들어올 곳 -->
+	<th:block th:replace="/inc/footer"/>
+	<!-- /footer -->
+</body>
+</html>
